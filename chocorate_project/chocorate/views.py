@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("New home")
+    context_dict = {}
+    return render(request, 'chocorate/home.html', context = context_dict)
 
 def categories(request):
     return HttpResponse("Cats, all cats")
