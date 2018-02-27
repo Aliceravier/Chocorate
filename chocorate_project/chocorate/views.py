@@ -6,29 +6,37 @@ def home(request):
     return render(request, 'chocorate/home.html', context = context_dict)
 
 def categories(request):
-    return HttpResponse("Cats, all cats")
+    context_dict = {}
+    return render(request, 'chocorate/categories.html', context = context_dict)
 
 def profile(request):
-    return HttpResponse("Hi you")
+    context_dict = {}
+    return render(request, 'chocorate/profile.html', context = context_dict)
 
 def about(request):
-    return HttpResponse("What is this about?")
+    context_dict = {}
+    return render(request, 'chocorate/about.html', context = context_dict)
 
 
 
 def signUpIn(request):
-    return HttpResponse("Sign up/in")
+    context_dict = {}
+    return render(request, 'chocorate/signUpIn.html', context = context_dict)
 
 def myPost(request):
-    return HttpResponse("Add your post here")
+    context_dict = {}
+    return render(request, 'chocorate/myPost.html', context = context_dict)
 
 def addPost(request):
-    return HttpResponse("This... is your post")
+    context_dict = {}
+    return render(request, 'chocorate/addPost.html', context = context_dict)
 
 def settings(request):
-    return HttpResponse("Set the ings")
+    context_dict = {}
+    return render(request, 'chocorate/settings.html', context = context_dict)
 
 def FAQ(request):
-    return HttpResponse("F ask questions")
+    context_dict = {}
+    return render(request, 'chocorate/FAQ.html', context = context_dict)
 
 
