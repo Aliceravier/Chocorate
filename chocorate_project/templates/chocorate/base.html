@@ -1,6 +1,39 @@
 <! DOCTYPE html>
 <html>
 	<head lang="en">
+		<style>
+			body{
+			background-color: bisque;
+			}
+			a{color:black;
+			  text-decoration:none;
+			  }
+			a:hover{
+				color:goldenrod;
+			}
+			{% if current %}{
+				a.about{color:goldenrod;}
+			}
+			{% endif %}
+			headerElement{ font-size: 30pt;
+							color: saddlebrown;
+							margin: 10px;}
+							
+			#siteName{
+						border-right-style: solid;
+						border-color: black;
+						border-width: 2px;
+						padding: 10px;
+						}
+			div.header		{
+					border-width: 2px;
+					border-color: black;
+					border-bottom-style: solid;
+					padding-bottom: 10px;
+					
+					}
+			
+		</style>
 		<meta charset="UTF-8"/>
 		<title>
 			Chocorate - 
@@ -10,18 +43,20 @@
 		</title>
 	</head>
 	<body>
+		<div class="header">
+		<headerElement id="siteName"> Chocorate</headerElement>
+		<headerElement><a href="{% url 'home' %}">Home</a></headerElement>
+		<headerElement><a href="{% url 'categories' %}">Categories</a></headerElement>
+		<headerElement><a href="{% url 'profile' %}">Profile</a></headerElement>
+		<headerElement><a href="{% url 'about' %}" class="about" >About</a></headerElement>
+		</div>
 		<div>
 			{% block body_block %}
 			{% endblock %}
 		</div>
-		<hr/>
 		<div>
-		 <ul>
-			<li><a href="{% url 'home' %}">Home</a></li>
-			<li><a href="{% url 'categories' %}">Categories</a></li>
-			<li><a href="{% url 'profile' %}">Profile</a></li>
-			<li><a href="{% url 'about' %}">About</a></li>
-		</ul>
+
 		</div>
 	</body>
 </html>
+

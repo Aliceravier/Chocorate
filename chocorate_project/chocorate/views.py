@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    context_dict = {}
+    context_dict = {'current': 'home'}
     return render(request, 'chocorate/home.html', context = context_dict)
 
 def categories(request):
@@ -14,7 +14,7 @@ def profile(request):
     return render(request, 'chocorate/profile.html', context = context_dict)
 
 def about(request):
-    context_dict = {}
+    context_dict = {"current":"about"}
     return render(request, 'chocorate/about.html', context = context_dict)
 
 
