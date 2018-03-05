@@ -6,11 +6,11 @@ def home(request):
     return render(request, 'chocorate/home.html', context = context_dict)
 
 def categories(request):
-    context_dict = {}
+    context_dict = {'current': 'categories'}
     return render(request, 'chocorate/categories.html', context = context_dict)
 
 def profile(request):
-    context_dict = {}
+    context_dict = {'current': 'profile'}
     return render(request, 'chocorate/profile.html', context = context_dict)
 
 def about(request):
@@ -20,23 +20,23 @@ def about(request):
 
 
 def signUpIn(request):
-    context_dict = {}
+    context_dict = {'current': 'profile'}
     return render(request, 'chocorate/signUpIn.html', context = context_dict)
 
 def myPost(request):
-    context_dict = {}
+    context_dict = {'current': 'profile'}
     return render(request, 'chocorate/myPost.html', context = context_dict)
 
 def addPost(request):
-    context_dict = {}
+    context_dict = {'current': 'profile'}
     return render(request, 'chocorate/addPost.html', context = context_dict)
 
 def settings(request):
-    context_dict = {}
+    context_dict = {'current': 'profile'}
     return render(request, 'chocorate/settings.html', context = context_dict)
 
 def FAQ(request):
-    context_dict = {}
+    context_dict = {"current":"about"}
     return render(request, 'chocorate/FAQ.html', context = context_dict)
 
 

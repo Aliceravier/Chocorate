@@ -12,5 +12,5 @@ make admin look nice?
 Consider merging addPost and myPost
 
 CSS/HTML base
-- figure out how to make links show diff color when on relevant page
 - if possible, get line under header to extend whole width of page
+- put css in different file

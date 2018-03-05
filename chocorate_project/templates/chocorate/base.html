@@ -11,10 +11,9 @@
 			a:hover{
 				color:goldenrod;
 			}
-			{% if current %}{
-				a.about{color:goldenrod;}
-			}
-			{% endif %}
+			
+			a.{{current}}{color:goldenrod;}
+
 			headerElement{ font-size: 30pt;
 							color: saddlebrown;
 							margin: 10px;}
@@ -29,8 +28,7 @@
 					border-width: 2px;
 					border-color: black;
 					border-bottom-style: solid;
-					padding-bottom: 10px;
-					
+					padding-bottom: 10px;				
 					}
 			
 		</style>
@@ -45,9 +43,9 @@
 	<body>
 		<div class="header">
 		<headerElement id="siteName"> Chocorate</headerElement>
-		<headerElement><a href="{% url 'home' %}">Home</a></headerElement>
-		<headerElement><a href="{% url 'categories' %}">Categories</a></headerElement>
-		<headerElement><a href="{% url 'profile' %}">Profile</a></headerElement>
+		<headerElement><a href="{% url 'home' %}" class="home" >Home</a></headerElement>
+		<headerElement><a href="{% url 'categories' %}" class="categories" >Categories</a></headerElement>
+		<headerElement><a href="{% url 'profile' %}" class="profile" >Profile</a></headerElement>
 		<headerElement><a href="{% url 'about' %}" class="about" >About</a></headerElement>
 		</div>
 		<div>
