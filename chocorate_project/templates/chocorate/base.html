@@ -25,7 +25,12 @@
 				<a href="{% url 'myPost' %}">Your post</a>
 			</div>
 		</div>
-		<headerElement><a href="{% url 'about' %}" class="about" >About</a></headerElement>
+		<div class="about-dropdown">
+			<headerElement><a href="{% url 'about' %}" class="about" >About</a></headerElement>
+			<div class="about-options">
+				<a href="{% url 'FAQ' %}">FAQ</a>
+			</div>
+		</div>
 		</div>
 		
 		<div>

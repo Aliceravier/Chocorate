@@ -16,10 +16,11 @@ CONSIDER
 
 CSS/HTML base
 - if possible, get line under header to extend whole width of page
-- put css in different file
-- add dropdowns to profile and about
+- add username OR sign in/up
+- add sign out
+- add search box
 
 
 MARKS
-- get page to be responsive to change of shape
+- get page to be responsive to change of shape (1)
 - have javascript/AJAX/JQuery
