@@ -1,17 +1,25 @@
 # Chocorate
-Repo for our second year WAD project that aims to setup the chocorate website (about rating chocolate) using django
+Repo for our second year WAD project that aims to setup the Chocorate website (about rating chocolate) using django
 
 TODO (incomplete list)
-add gitignore for db.sqlite3, etc...
-make nice html for all views
+- make nice html/css for all views
 	make signin/up forms
-make nice base html
-create database/migrate/test
-make admin look nice?
+- make nice base html
+- create database/migrate/test
+- make search logic
+- add specifics under 'marks' that we're being marked on in here
 
-Consider merging addPost and myPost
+CONSIDER
+- merging addPost and myPost
+- Bootstrapping
+- making admin look nice
 
 CSS/HTML base
 - if possible, get line under header to extend whole width of page
 - put css in different file
-- put back links in inside pages to link back to header page
+- add dropdowns to profile and about
+
+
+MARKS
+- get page to be responsive to change of shape
+- have javascript/AJAX/JQuery
