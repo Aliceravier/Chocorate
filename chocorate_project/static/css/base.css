@@ -10,9 +10,7 @@ a:hover{
 	color:goldenrod;
 	}
 
-a.{{current}}{
-	color:goldenrod;
-	}
+
 	
 a.profile{
 	cursor: crosshair;

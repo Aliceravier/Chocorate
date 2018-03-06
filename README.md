@@ -24,3 +24,7 @@ CSS/HTML base
 MARKS
 - get page to be responsive to change of shape (1)
 - have javascript/AJAX/JQuery
+
+NOTES
+- had to change css in base to have django variable part in head of html
+	instead of in seperate css doc
