@@ -11,7 +11,7 @@ TODO (incomplete list)
 
 CONSIDER
 - merging addPost and myPost
-- Bootstrapping
+- Bootstrap
 - making admin look nice
 
 CSS/HTML base
@@ -28,3 +28,6 @@ MARKS
 NOTES
 - had to change css in base to have django variable part in head of html
 	instead of in seperate css doc
+	
+TIPS
+- CSS won't update? Try clearing the cache: shift + refresh page
