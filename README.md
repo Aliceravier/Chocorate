@@ -14,9 +14,10 @@ CONSIDER
 - making admin look nice
 
 CSS/HTML base
-- change active dropdown color
 - add line between brandname and text in header
 - get profile and about to highlight when submenus selected
+- NOT ESSENTIAL change dropdown items color
+- when in small screen mode have body drop down more when header is selected. atm just gets hidden by header expanding
 
 -- have something to link to sign out
 -- have sthg to link to search submit button

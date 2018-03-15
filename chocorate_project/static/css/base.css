@@ -10,8 +10,8 @@ a{
     color: saddlebrown;
 }
 a:hover{
-        color: brown;
-        text-decoration:none;
+	color: brown;
+	text-decoration:none;
 }
 
 .navbar {
@@ -49,5 +49,13 @@ a:hover{
     border-color:saddlebrown;
 }
 	
+/*when dropdown is selected*/
+.navbar .nav > li.dropdown.open.active > a:hover, 
+.navbar .nav > li.dropdown.open > a
+{
+   background-color: rgb(202, 164, 115);
+   color:brown;
+}	
+
 
 
