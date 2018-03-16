@@ -4,6 +4,59 @@
 	Welcome to New Home
 {% endblock %}
 
+{% block css-link %}
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+{% endblock %}
+
 {% block body_block %}
-	<h1 style=" font-size: 20pt;"> New Home </h1>
+<div class="trending">Trending</div>
+<div>
+    {% if categories %}
+    <ul>
+        {% for category in categories %}
+        <li>
+            <a href="{% url 'home' %}">{{ category.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <strong class="no-cats"> There are no categories present. </strong>
+    {% endif %}
+</div>
+<div class="dividing-line"></div>
+<button type="button" class="btn btn-default" id="sort-btn">Sort alphabetically</button>
+<div class="items">
+    {% if chocolates %}
+    <ul>
+        {% for chocolate in chocolates %}
+        <li>
+            <div class="choc-title">
+                chocolate.title
+            </div>
+            <img src=chocolate.image-url alt=chocolate.picture-alt />
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Comments
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    {% if chocolate.comments %}
+                        {% for comment in chocolate.comments %}
+                        <li>
+                            {{comment.message}}
+                        </li>
+                        {% endfor %} 
+                    {% else %}
+                    <strong class="no-comms"> No-one has commented yet </strong>
+                    {% endif %}
+                </ul>
+            </li>
+            <button type="button" class="btn btn-default" id="comm-btn">Add comment</button>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <strong class="no-chocs"> There are no chocolates present. </strong>
+    {% endif %}
+</div>
 {% endblock %}

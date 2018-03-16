@@ -65,4 +65,24 @@ a:hover{
     color: blue;
 }
 
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: none;
+}
 
+.navbar-inverse .navbar-toggle {
+    border-color: bisque;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: bisque;
+}
+
+.push {
+    transition: transform 0.5s;
+    transform: translate(0px, 160px);
+}
+
+.pushUp {
+    transition: transform 0.5s;
+    transform: translate(0px, 30px);
+}

@@ -14,7 +14,6 @@ CONSIDER
 - making admin look nice
 
 CSS/HTML base
-- DONE add line between brandname and text in header
 - get profile and about to highlight when submenus selected
 - NOT ESSENTIAL change dropdown items color
 - when in small screen mode have body drop down more when header is selected. atm just gets hidden by header expanding
@@ -22,6 +21,9 @@ CSS/HTML base
 -- have something to link to sign out
 -- have sthg to link to search submit button
 
+Home template
+- add scrollable items with image, title, comments
+-- need list of trending chocolates
 
 MARKS
 - DONE get page to be responsive to change of shape (1) 
