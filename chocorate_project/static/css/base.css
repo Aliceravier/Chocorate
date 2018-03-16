@@ -1,10 +1,11 @@
 body{
 	background-color: bisque;
 	}
-	
+
+/*	
 .body-block{
 	margin-top:50px;
-	}
+	} */
 
 a{
     color: saddlebrown;
@@ -19,9 +20,11 @@ a:hover{
 }
 
 .navbar .navbar-brand{
-    color:sandybrown;
-    font-size:x-large;
-    border-color:black;
+    border-right: 2px solid sandybrown;
+    color: sandybrown;
+    font-size: x-large;
+    margin-right: 10px;
+    padding-right: 20px;
 }
 
 .navbar .navbar-brand:hover {
@@ -29,7 +32,7 @@ a:hover{
 }
 
 
-/*when text in header is active*/
+/*when text in header is active (from js script)*/
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:hover {
@@ -57,5 +60,9 @@ a:hover{
    color:brown;
 }	
 
+
+.navbar-inverse .navbar-toggle{
+    color: blue;
+}
 
 
