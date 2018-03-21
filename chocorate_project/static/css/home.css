@@ -1,34 +1,29 @@
-.trending {
+.trending h2 {
     font-size: 30pt;
-    left: 10%;
-    position: fixed;
     margin-top: 30pt;
 }
 
-.dividing-line{
-    border-left: 4px solid black;
-    height: 1000px;
-    position: fixed;
-    left: 30%;
-    top:0;
-}
 
 #sort-btn{
-    position: fixed;
-    left: 32%;
     margin-top: 30pt;
 }
 
 .no-cats{
     font-size: 20pt;
-    position: fixed;
-    margin-top: 100pt;
-    left: 4.5%;
+    margin-top: 200pt;
 }
 
 .no-chocs {
     font-size: 20pt;
-    position: fixed;
-    margin-top: 100pt;
-    left: 50%;
+    margin-top: 300pt;
 }
+
+#trending {
+    border-right: 3px black solid;
+    height:100%;
+}
+
+/*#body-block {
+    margin-top: 3rem;
+}
+    */

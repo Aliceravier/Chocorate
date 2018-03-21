@@ -1,4 +1,4 @@
-<! DOCTYPE html>
+﻿<! DOCTYPE html>
 {% load staticfiles %}
 <html>
 	<head lang="en">
@@ -12,9 +12,9 @@
 				The chocolate rating website
 			{% endblock %}
 		</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/base.css">
         {% block css-link %}		
         {% endblock %}
-        <link rel="stylesheet" type="text/css" href="/static/css/base.css">
         <style>
         
         </style>
@@ -98,7 +98,7 @@
 
         
 
-		<div id="body-block" class="pushUp">
+		<div id="body-block" class="pushUp container-fluid">
 			{% block body_block %}
 			{% endblock %}
 		</div>
