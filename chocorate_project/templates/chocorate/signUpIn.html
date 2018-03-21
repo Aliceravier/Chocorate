@@ -4,6 +4,27 @@
 	SignUpIn
 {% endblock %}
 
+{% block css-link %}
+<link rel="stylesheet" type="text/css" href="/static/css/signUpIn.css">
+{% endblock %}
+
 {% block body_block %}
-	<h1> You'll be able to sign up and in here soon </h1>
+	<div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Sign in</div>
+                <div class="panel-body">
+                    <div class="panel-body" id="username"></div>
+                    <div class="panel-body" id="password"></div>
+                    <div class="panel-body" id="sign-in"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <div class="text-center h2">
+                Sign up
+            </div>
+        </div>
+    </div>
 {% endblock %}
