@@ -9,7 +9,9 @@
 {% endblock %}
 
 {% block body_block %}
-<div class="trending">Trending</div>
+<div class="row" id="trending-row">
+	<div class="col-sm-4">Trending</div>
+	<button type="button" class="btn btn-default" id="sort-btn">Sort alphabetically</button>
 <div>
     {% if categories %}
     <ul>
@@ -24,7 +26,7 @@
     {% endif %}
 </div>
 <div class="dividing-line"></div>
-<button type="button" class="btn btn-default" id="sort-btn">Sort alphabetically</button>
+
 <div class="items">
     {% if chocolates %}
     <ul>

@@ -4,12 +4,19 @@
 	About Chocorate
 {% endblock %}
 
+{% block css-link %}
+    <link rel="stylesheet" type="text/css" href="/static/css/about.css">
+{% endblock %}
+
 
 {% block body_block %}
-	<h1> About </h1>
+	<div class="page-header">
+		<h1 id="about"> About </h1>
+	</div>
+	<img src="/static/images/team.jpg" class="img-rounded img-responsive" id="team-pic" alt="picture of team" />
 	<div>
 	<ul>
-		<li><a href="{% url 'FAQ' %}">FAQ</a></li>
+		<li class="list-unstyled" ><a href="{% url 'FAQ' %}">FAQ</a></li>
 	</ul>
 	</div>
 {% endblock %}

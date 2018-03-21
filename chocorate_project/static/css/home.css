@@ -1,6 +1,5 @@
-.trending {
+#trending-row {
     font-size: 30pt;
-    left: 10%;
     position: fixed;
     margin-top: 30pt;
 }
@@ -13,11 +12,6 @@
     top:0;
 }
 
-#sort-btn{
-    position: fixed;
-    left: 32%;
-    margin-top: 30pt;
-}
 
 .no-cats{
     font-size: 20pt;
