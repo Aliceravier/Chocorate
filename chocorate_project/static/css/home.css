@@ -1,28 +1,32 @@
+
 #trending-row {
     font-size: 30pt;
     position: fixed;
+.trending h2 {
+    font-size: 30pt;
     margin-top: 30pt;
 }
 
-.dividing-line{
-    border-left: 4px solid black;
-    height: 1000px;
-    position: fixed;
-    left: 30%;
-    top:0;
+
+
+
+#sort-btn{
+    margin-top: 30pt;
 }
 
 
 .no-cats{
     font-size: 20pt;
-    position: fixed;
-    margin-top: 100pt;
-    left: 4.5%;
+    margin-top: 200pt;
 }
 
 .no-chocs {
     font-size: 20pt;
-    position: fixed;
-    margin-top: 100pt;
-    left: 50%;
+    margin-top: 300pt;
 }
+
+#trending {
+    border-right: 3px black solid;
+    height:100%;
+}
+

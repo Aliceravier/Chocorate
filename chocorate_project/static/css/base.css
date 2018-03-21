@@ -2,11 +2,6 @@ body{
 	background-color: bisque;
 	}
 
-/*	
-.body-block{
-	margin-top:50px;
-	} */
-
 a{
     color: saddlebrown;
 }
@@ -77,12 +72,6 @@ a:hover{
     background-color: bisque;
 }
 
-.push {
-    transition: transform 0.5s;
-    transform: translate(0px, 160px);
-}
-
-.pushUp {
-    transition: transform 0.5s;
-    transform: translate(0px, 30px);
+#body-block {
+    margin-top: 50px;
 }
