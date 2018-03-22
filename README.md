@@ -3,7 +3,6 @@ Repo for our second year WAD project that aims to setup the Chocorate website (a
 
 TODO (incomplete list)
 - rate chocolates
-- add a new post functionality
 - comments
 - make signin/up forms
 - make nice html/css for all views	

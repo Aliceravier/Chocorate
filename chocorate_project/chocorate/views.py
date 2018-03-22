@@ -2,13 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from chocorate.forms import SearchForm 
-from chocorate.models import Search, Post
+from chocorate.models import Search, Chocolate
 from chocorate.forms import AddPostForm
 
 
 
 def home(request):
     context_dict = {'current': 'home'}
+    context_dict['chocolates']=Chocolate.objects.order_by('name')
     return render(request, 'chocorate/home.html', context = context_dict)
 
 def categories(request):
@@ -38,7 +39,8 @@ def addPost(request):
     if request.method == 'POST':
         form = AddPostForm(request.POST)
         if form.is_valid():
-            form.save(commit=True)
+            chocolate = form.save(commit=True)
+            chocolate.save()
             return home(request)
         else:
             print(form.errors)

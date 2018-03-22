@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.auth.models import User
 from chocorate.models import UserProfile
 from chocorate.models import Search
-from chocorate.models import Post
+from chocorate.models import Chocolate
 
 
 class UserForm(forms.ModelForm):
@@ -27,13 +27,13 @@ class SearchForm(forms.ModelForm):
         fields = ('search',)
 
 class AddPostForm(forms.ModelForm):
-    title = forms.CharField(max_length=200,
+    name = forms.CharField(max_length=200,
                             help_text="Enter title for post")
-    postType = forms.CharField(max_length=200,
+    chocolate_type = forms.CharField(max_length=200,
                             help_text="Enter type of chocolate")
     description = forms.CharField(max_length=200,
                             help_text="Enter description for chocolate")
-    image = forms.ImageField(required=False, help_text="Upload image of chocolate here")
+    picture = forms.ImageField(required=False, help_text="Upload image of chocolate here")
     class Meta:
-        model = Post
-        fields = ('title', 'postType', 'description', 'image',)
+        model = Chocolate
+        fields = ('name', 'chocolate_type', 'description', 'picture',)
