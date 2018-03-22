@@ -9,40 +9,6 @@
 {% endblock %}
 
 {% block body_block %}
-<div class="row" id="trending-row">
-	<div class="col-sm-4">Trending</div>
-	<button type="button" class="btn btn-default" id="sort-btn">Sort alphabetically</button>
-<div>
-    {% if categories %}
-    <ul>
-        {% for category in categories %}
-        <li>
-            <a href="{% url 'home' %}">{{ category.name }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <strong class="no-cats"> There are no categories present. </strong>
-    {% endif %}
-</div>
-<div class="dividing-line"></div>
-
-<div class="items">
-    {% if chocolates %}
-    <ul>
-        {% for chocolate in chocolates %}
-        <li>
-            <div class="choc-title">
-                chocolate.title
-            </div>
-            <img src=chocolate.image-url alt=chocolate.picture-alt />
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    Comments
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    {% if chocolate.comments %}
 <div class="row">
     <div class="trending col-sm-3 text-center" id="trending">
         <h2>Trending</h2>

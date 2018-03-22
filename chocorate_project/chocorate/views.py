@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from chocorate.forms import SearchForm
+from chocorate.models import Search
+
+
 def home(request):
     context_dict = {'current': 'home'}
     return render(request, 'chocorate/home.html', context = context_dict)
@@ -38,5 +42,18 @@ def settings(request):
 def FAQ(request):
     context_dict = {"current":"about"}
     return render(request, 'chocorate/FAQ.html', context = context_dict)
+
+def searchResults(request):
+    context_dict = {}
+    print (request.method)
+    print (request.POST)
+    if request.method == "POST":
+        form = SearchForm(data = request.POST)
+        #print ('form %s' % form.search)
+        search_obj = form.save(commit=False)
+        print (search_obj)
+        context_dict['term'] = request.POST['search']
+    return render(request, 'chocorate/results.html', context = context_dict)
+
 
 
