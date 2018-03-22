@@ -40,3 +40,7 @@ TIPS
 - cant use bootstrap theme if we want to customise 
 - cant figure out how to change how css looks? open dev tools in browser goto elements, 
 figure out which bit of code is doing the thing. copy that into base.css then change to what you want.
+
+REQUIREMENTS
+django-star-ratings
+pillow

@@ -50,13 +50,13 @@
 							<ul class="dropdown-menu">
                                 <li><a href="{% url 'profile' %}">Profile page</a></li>
 
-                                {% if user.is_authenticated %}
+                                <!---{% if user.is_authenticated %}-->
 								    <li><a href="{% url 'settings' %}">Settings</a></li>								    
 								    <li><a href="{% url 'addPost' %}">Add a Post</a></li>
 								    <li><a href="{% url 'myPost' %}">Your post</a></li>
-                                {% else %}
+                                <!---{% else %}-->
                                     <li><a href="{% url 'signUpIn' %}">SignUpIn</a></li>
-                                {% endif %}
+                                <!--{% endif %}-->
 
 							</ul>
 						</li>
@@ -69,14 +69,14 @@
 							</ul>
 						</li>
 					</ul>
-                    <!--add form thing here when implemented instead of action_page.php-->
+
 				    <form class="navbar-form navbar-left" method="post" action="/chocorate/results/">
 						{% csrf_token %}
-                        {% for hidden in form.hidden_fields %}
+                        {% for hidden in search_form.hidden_fields %}
 							{{ hidden }}
 						{% endfor %}
 
-						{% for field in form.visible_fields %}
+						{% for field in search_form.visible_fields %}
 							{{ field.errors }}
 							{{ field.help_text }}
 							{{ field }}
