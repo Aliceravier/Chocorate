@@ -54,6 +54,3 @@ def searchResults(request):
         print (search_obj)
         context_dict['term'] = request.POST['search']
     return render(request, 'chocorate/results.html', context = context_dict)
-
-
-

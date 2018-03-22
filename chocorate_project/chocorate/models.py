@@ -15,7 +15,7 @@ class Search(models.Model):
     search = models.CharField(max_length=128)
 
 class Chocolate(models.Model):
-    avgrating = models.IntegerField()
+    avgrating = models.FloatField()
     comments = models.TextField()
     name = models.CharField(max_length=30)
     # url = models.URLField()

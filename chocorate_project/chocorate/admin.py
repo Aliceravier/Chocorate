@@ -1,3 +1,5 @@
 from django.contrib import admin
+from chocorate.models import UserProfile, Chocolate
 
-# Register your models here.
+admin.site.register(UserProfile)
+admin.site.register(Chocolate)
