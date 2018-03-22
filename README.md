@@ -2,11 +2,14 @@
 Repo for our second year WAD project that aims to setup the Chocorate website (about rating chocolate) using django
 
 TODO (incomplete list)
-- make nice html/css for all views	
-- make nice base html
+- rate chocolates
+- add a new post functionality
+- comments
 - make signin/up forms
-- create database/migrate/test
-- make search logic
+- make nice html/css for all views	
+- population script
+- have five most popular categories under trending
+
 - add specifics under 'MARKS' that we're being marked on in here
 
 CONSIDER

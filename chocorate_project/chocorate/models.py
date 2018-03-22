@@ -21,3 +21,6 @@ class Chocolate(models.Model):
     # url = models.URLField()
     picture = models.ImageField()
     description = models.CharField(max_length=200)
+
+class Rating(models.Model):
+    chocolate=models.ForeignKey(Chocolate)

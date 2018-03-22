@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^chocorate/', include('chocorate.urls')),
+    url(r'^ratings/', include('ratings.urls'),
 ]
