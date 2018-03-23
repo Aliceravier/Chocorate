@@ -23,6 +23,10 @@ class Chocolate(models.Model):
     picture = models.ImageField(blank=True, null=True, help_text="Upload image of chocolate here")
     description = models.CharField(default="",max_length=200)
     
-
+#to add to comment class
 class Rating(models.Model):
     chocolate=models.ForeignKey(Chocolate)
+    
+class Comment(models.Model):
+    message = models.CharField(max_length=500, default="")
+    rating = models.FloatField(default=2.5)

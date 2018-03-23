@@ -47,13 +47,13 @@
 							<ul class="dropdown-menu">
                                 <li><a href="{% url 'profile' %}">Profile page</a></li>
 
-                                <!---{% if user.is_authenticated %}-->
+                                {% if user.is_authenticated %}
 								    <li><a href="{% url 'settings' %}">Settings</a></li>								    
 								    <li><a href="{% url 'addPost' %}">Add a Post</a></li>
 								    <li><a href="{% url 'myPost' %}">Your post</a></li>
-                                <!---{% else %}-->
+                                {% else %}
                                     <li><a href="{% url 'signUpIn' %}">SignUpIn</a></li>
-                                <!--{% endif %}-->
+                                {% endif %}
 
 							</ul>
 						</li>

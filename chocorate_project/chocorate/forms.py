@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from chocorate.models import UserProfile
 from chocorate.models import Search
 from chocorate.models import Chocolate
+from chocorate.models import Comment
 
 
 class UserForm(forms.ModelForm):
@@ -37,3 +38,11 @@ class AddPostForm(forms.ModelForm):
     class Meta:
         model = Chocolate
         fields = ('name', 'chocolate_type', 'description', 'picture',)
+
+class AddCommentForm:
+    message = forms.CharField(max_length=500,
+                              help_text="Enter comment here")
+    rating = forms.FloatField(help_text="Rating here")
+    class Meta:
+        model = Comment
+        fields = ('message', 'rating')

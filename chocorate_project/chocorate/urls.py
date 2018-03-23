@@ -13,6 +13,6 @@ urlpatterns = [
     url(r'^profile/addPost/$', views.addPost, name='addPost'),
     url(r'^profile/settings/$', views.settings, name='settings'),
     url(r'^about/FAQ/$', views.FAQ, name='FAQ'),
-    url(r'^test/$', views.test, name='tst'),
+    url(r'^test/$', views.test, name='test'),
 
 ]
