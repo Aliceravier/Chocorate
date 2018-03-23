@@ -54,7 +54,7 @@
                         {% endif %}
                     </ul>
                 </li>
-                <button type="button" class="btn btn-default" id="comm-btn">Add comment</button>
+                <button type="button" class="comm-btn btn btn-default" >Add comment</button>
                 </li>
                 {% endfor %}
             </ul>
@@ -64,4 +64,14 @@
         </div>
     </div>
 </div>
+<script src="/static/Bootstrap/js/jquery.min.js"></script>
+<script src="/static/Bootstrap/js/bootstrap.min.js"></script>
+
+	
+
+
+{% endblock %}
+
+{% block js-link %}		
+	<script src="/static/js/home.js"></script>
 {% endblock %}

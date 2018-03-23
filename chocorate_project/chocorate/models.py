@@ -22,12 +22,6 @@ class Chocolate(models.Model):
     # url = models.URLField()
     picture = models.ImageField(blank=True, null=True, help_text="Upload image of chocolate here")
     description = models.CharField(default="",max_length=200)
-
-'''class Post(models.Model):
-    title = models.CharField(max_length=200, default="")
-    postType = models.CharField(max_length=200, default="")
-    description = models.CharField(max_length=200, default="")
-    image = models.ImageField(null=True, blank=True, help_text="Upload image of chocolate here")'''
     
 
 class Rating(models.Model):
