@@ -6,7 +6,6 @@ TODO (incomplete list)
 - comments
 - make nice html/css for all views	
 - population script
-- have five most popular categories under trending
 - get sign out to show alert when signing out sucessfully
 
 - add specifics under 'MARKS' that we're being marked on in here

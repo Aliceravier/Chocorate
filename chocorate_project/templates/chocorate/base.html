@@ -97,9 +97,16 @@
                                 <dpsn></dpsn>Sign out</span>
                             </a>
                         </li>
-                        {% else %}                       
+                        {% else %}      
+                            <li>
+                                <a href="{% url 'login' %}">
+                                    <span>
+                                    </span> login
+                                </a>
+                            </li>
 						    <li><a href="{% url 'signUp' %}"><span class="glyphicon glyphicon-user">
-						    </span> SignUp </a></li>                     
+						    </span> SignUp </a></li>  
+                        
                         {% endif %}
 					</ul>
 				</div>

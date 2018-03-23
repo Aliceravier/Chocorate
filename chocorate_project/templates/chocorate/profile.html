@@ -5,7 +5,15 @@
 {% endblock %}
 
 {% block body_block %}
-	<h1> Hi You </h1>
+
+	<h1> 
+    {% if user.is_authenticated %}
+    Hi {{user.username}} ! 
+    {% else %}
+    Hi, login or sign up here :)
+    {% endif %}
+    
+    </h1>
 	<div>
 		<ul>
             {% if user.is_authenticated %}

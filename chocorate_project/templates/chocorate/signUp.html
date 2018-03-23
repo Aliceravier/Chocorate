@@ -32,11 +32,11 @@
                                     </div>
                                 </div>
                             </div>
-                            {% for field in form.visible_fields %}
-                            {{ field.errors }}
-                            {{ field.help_text }}
-                            {{ field }}
-                            {% endfor %}
+                                {% for field in form.visible_fields %}
+                                {{ field.errors }}
+                                {{ field.help_text }}
+                                {{ field }}
+                                {% endfor %}
                             <input type="submit" name="submit" value="Sign Up" />
                     </form>
                 </div>
