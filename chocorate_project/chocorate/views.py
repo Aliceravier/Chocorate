@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth import logout
+from django.contrib.auth import authenticate, login
+from django.contrib.auth import views as auth_views
 
 from chocorate.forms import SearchForm 
 from chocorate.models import Search, Chocolate
-from chocorate.forms import AddPostForm, SignInForm
+from chocorate.forms import AddPostForm, SignUpForm
+
 
 
 
@@ -28,17 +32,19 @@ def about(request):
 
 
 def signUpIn(request):
-    form = SignInForm()
+    sign_form = SignUpForm()
     if request.method == 'POST':
-        form = SignInForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=True)
+        sign_form = SignUpForm(request.POST)
+        if sign_form.is_valid():
+            user = sign_form.save(commit=True)
             user.save()
             return home(request)
         else:
-            print(form.errors)
-    context_dict = {'current': 'profile'}
-    return render(request, 'chocorate/signUpIn.html', {'form' : form})
+            print(sign_form.errors)
+    return render(request, 'chocorate/signUpIn.html', {'form' : sign_form})
+
+def signOut(request):
+    logout(request)
 
 def myPost(request):
     context_dict = {'current': 'profile'}

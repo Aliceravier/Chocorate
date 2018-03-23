@@ -53,6 +53,7 @@
 								    <li><a href="{% url 'myPost' %}">Your post</a></li>
                                 {% else %}
                                     <li><a href="{% url 'signUpIn' %}">SignUpIn</a></li>
+                                <li><a href="{% url 'login' %}">login</a></li>
                                 {% endif %}
 
 							</ul>
@@ -92,7 +93,7 @@
                             </span> Hey {{username}}!
                         </li>
                         <li>
-                            <a href="{% url 'signUpIn' %}">
+                            <a href="{% url 'signOut' %}">
                                 <dpsn></dpsn>Sign out</span>
                             </a>
                         </li>
@@ -107,8 +108,7 @@
 		<div id="body-block" class="pushUp container-fluid">
 			{% block body_block %}
 			{% endblock %}
-		</div>
-        
+		</div> 
 		<script src="/static/Bootstrap/js/jquery.min.js"></script>
 		<script src="/static/Bootstrap/js/bootstrap.min.js"></script>
         <script src="/static/js/base.js"></script>

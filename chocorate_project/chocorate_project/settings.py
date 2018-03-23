@@ -72,6 +72,7 @@ TEMPLATES = [
     },
 ]
 
+LOGIN_REDIRECT_URL = 'home'
 
 WSGI_APPLICATION = 'chocorate_project.wsgi.application'
 

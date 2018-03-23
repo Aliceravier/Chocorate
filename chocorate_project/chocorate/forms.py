@@ -1,4 +1,3 @@
-
 from django import forms
 from django.contrib.auth.models import User
 from chocorate.models import UserProfile
@@ -7,7 +6,7 @@ from chocorate.models import Chocolate
 from chocorate.models import Comment
 
 
-class SignInForm(forms.ModelForm):
+class SignUpForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
