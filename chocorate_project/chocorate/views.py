@@ -31,7 +31,7 @@ def about(request):
 
 
 
-def signUpIn(request):
+def signUp(request):
     sign_form = SignUpForm()
     if request.method == 'POST':
         sign_form = SignUpForm(request.POST)
@@ -41,7 +41,7 @@ def signUpIn(request):
             return home(request)
         else:
             print(sign_form.errors)
-    return render(request, 'chocorate/signUpIn.html', {'form' : sign_form})
+    return render(request, 'chocorate/signUp.html', {'form' : sign_form})
 
 def signOut(request):
     logout(request)

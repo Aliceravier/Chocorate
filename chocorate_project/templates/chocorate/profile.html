@@ -8,10 +8,15 @@
 	<h1> Hi You </h1>
 	<div>
 		<ul>
-			<li><a href="{% url 'settings' %}">Settings</a></li>
-			<li><a href="{% url 'signUpIn' %}">SignUpIn</a></li>
+            {% if user.is_authenticated %}
+			<li><a href="{% url 'settings' %}">Settings</a></li>			
 			<li><a href="{% url 'addPost' %}">Add a Post</a></li>
 			<li><a href="{% url 'myPost' %}">Your post</a></li>
+            <li><a href="{% url 'signOut' %}">Logout</a></li>
+            {% else %}
+            <li><a href="{% url 'signUp' %}">SignUpIn</a></li>
+            <li><a href="{% url 'login' %}">login</a></li>
+            {% endif %}
 		</ul>
 	</div>
 {% endblock %}

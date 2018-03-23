@@ -10,9 +10,9 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^categories/$', views.categories, name='categories'),
 
-    url(r'^profile/signUpIn/$', views.signUpIn, name='signUpIn'),
+    url(r'^profile/signUp/$', views.signUp, name='signUp'),
     url(r'^profile/login/$', auth_views.login,{'template_name': 'chocorate/login.html'}, name='login'),
-    url(r'^profile/signOut/$', logout, name='signOut'),
+    url(r'^profile/signOut/$', auth_views.logout,{'next_page': '/chocorate/home/'},  name='signOut'),
     url(r'^profile/myPost/$', views.myPost, name='myPost'),
     url(r'^profile/addPost/$', views.addPost, name='addPost'),
     url(r'^profile/settings/$', views.settings, name='settings'),

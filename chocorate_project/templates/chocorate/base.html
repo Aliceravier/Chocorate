@@ -52,7 +52,7 @@
 								    <li><a href="{% url 'addPost' %}">Add a Post</a></li>
 								    <li><a href="{% url 'myPost' %}">Your post</a></li>
                                 {% else %}
-                                    <li><a href="{% url 'signUpIn' %}">SignUpIn</a></li>
+                                    <li><a href="{% url 'signUp' %}">SignUp</a></li>
                                 <li><a href="{% url 'login' %}">login</a></li>
                                 {% endif %}
 
@@ -90,7 +90,7 @@
                         {% if user.is_authenticated %}
                         <li>                      
                             <span class="glyphicon glyphicon-user">
-                            </span> Hey {{username}}!
+                            </span> Hey {{user.username}}!
                         </li>
                         <li>
                             <a href="{% url 'signOut' %}">
@@ -98,8 +98,8 @@
                             </a>
                         </li>
                         {% else %}                       
-						    <li><a href="{% url 'signUpIn' %}"><span class="glyphicon glyphicon-user">
-						    </span> SignUpIn </a></li>                     
+						    <li><a href="{% url 'signUp' %}"><span class="glyphicon glyphicon-user">
+						    </span> SignUp </a></li>                     
                         {% endif %}
 					</ul>
 				</div>
