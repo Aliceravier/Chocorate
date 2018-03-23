@@ -44,17 +44,17 @@
                     </a>
                     <ul class="dropdown-menu">
                         {% if chocolate.comments %}
-                        {% for comment in chocolate.comments %}
-                        <li>
-                            {{comment.message}}
-                        </li>
-                        {% endfor %}
+                            {% for comment in chocolate.comments %}
+                            <li>
+                                {{comment.message}}
+                            </li>
+                            {% endfor %}
                         {% else %}
                         <strong class="no-comms"> No-one has commented yet </strong>
                         {% endif %}
                     </ul>
                 </li>
-                <button type="button" class="comm-btn btn btn-default" >Add comment</button>
+                    <button type="button" class="btn btn-default comm-btn" >Add comment</button>
                 </li>
                 {% endfor %}
             </ul>
@@ -65,9 +65,7 @@
     </div>
 </div>
 <script src="/static/Bootstrap/js/jquery.min.js"></script>
-<script src="/static/Bootstrap/js/bootstrap.min.js"></script>
-
-	
+<!--<script src="/static/Bootstrap/js/bootstrap.min.js"></script>-->	
 
 
 {% endblock %}
