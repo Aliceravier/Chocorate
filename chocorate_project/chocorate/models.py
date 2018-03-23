@@ -5,7 +5,6 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User)
     website = models.URLField(blank=True)
     picture = models.ImageField(upload_to='profile_images', blank=True)
-    password = models.CharField(max_length=30)
     notifications = models.IntegerField()
 
     def __str__(self):
@@ -21,6 +20,8 @@ class Chocolate(models.Model):
     chocolate_type = models.CharField(default="", max_length=200)
     # url = models.URLField()
     picture = models.ImageField(blank=True, null=True, help_text="Upload image of chocolate here")
+    picture_url = models.CharField(max_length=200)
+    picture_alt = models.CharField(default="some image should be here", max_length=200)
     description = models.CharField(default="",max_length=200)
     
 #to add to comment class

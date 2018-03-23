@@ -7,7 +7,7 @@ from chocorate.models import Chocolate
 from chocorate.models import Comment
 
 
-class UserForm(forms.ModelForm):
+class SignInForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
@@ -17,7 +17,7 @@ class UserForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('website', 'picture')
+        fields = ('website', 'picture', 'notifications')
 
 class SearchForm(forms.ModelForm):
 
@@ -35,9 +35,13 @@ class AddPostForm(forms.ModelForm):
     description = forms.CharField(max_length=200,
                             help_text="Enter description for chocolate")
     picture = forms.ImageField(required=False, help_text="Upload image of chocolate here")
+    picture_url = forms.CharField(max_length=200,
+                                  help_text="Enter url of chocolate")
+    picture_alt = forms.CharField(max_length=200,
+                                  help_text="Enter written description for image here")
     class Meta:
         model = Chocolate
-        fields = ('name', 'chocolate_type', 'description', 'picture',)
+        fields = ('name', 'chocolate_type', 'description', 'picture','picture_url','picture_alt',)
 
 class AddCommentForm:
     message = forms.CharField(max_length=500,

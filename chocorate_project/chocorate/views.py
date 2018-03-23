@@ -3,13 +3,14 @@ from django.http import HttpResponse
 
 from chocorate.forms import SearchForm 
 from chocorate.models import Search, Chocolate
-from chocorate.forms import AddPostForm
+from chocorate.forms import AddPostForm, SignInForm
 
 
 
 def home(request):
     context_dict = {'current': 'home'}
     context_dict['chocolates']=Chocolate.objects.order_by('name')
+    context_dict['chocolates5']=Chocolate.objects.order_by('name')[:5]
     return render(request, 'chocorate/home.html', context = context_dict)
 
 def categories(request):
@@ -27,8 +28,17 @@ def about(request):
 
 
 def signUpIn(request):
+    form = SignInForm()
+    if request.method == 'POST':
+        form = SignInForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=True)
+            user.save()
+            return home(request)
+        else:
+            print(form.errors)
     context_dict = {'current': 'profile'}
-    return render(request, 'chocorate/signUpIn.html', context = context_dict)
+    return render(request, 'chocorate/signUpIn.html', {'form' : form})
 
 def myPost(request):
     context_dict = {'current': 'profile'}

@@ -13,16 +13,16 @@
     <div class="trending col-sm-3 text-center" id="trending">
         <h2>Trending</h2>
         <div>
-            {% if categories %}
-            <ul>
-                {% for category in categories %}
+            {% if chocolates5 %}
+            <ul class="list-unstyled">
+                {% for chocolate in chocolates5 %}
                 <li>
-                    <a href="{% url 'home' %}">{{ category.name }}</a>
+                    <a href="{% url 'home' %}">{{ chocolate.name }}</a>
                 </li>
                 {% endfor %}
             </ul>
             {% else %}
-            <strong class="no-cats"> There are no categories present. </strong>
+            <strong class="no-cats"> There are no chocolates present. </strong>
             {% endif %}
         </div>
     </div>
@@ -30,13 +30,13 @@
         <button type="button" class="btn btn-default pull-left" id="sort-btn">Sort alphabetically</button>
         <div class="items">
             {% if chocolates %}
-            <ul>
+            <ul class="list-unstyled">
                 {% for chocolate in chocolates %}
                 <li>
                     <div class="choc-title">
-                        chocolate.name
-                    </div>
-                    <img src="/static/images/team.jpg" alt=chocolate.picture-alt />
+                        {{chocolate.name}}
+                    </div><!--"/static/images/team.jpg"-->
+                    <img src={{chocolate.picture_url}} class="img-rounded img-responsive" alt={{chocolate.picture_alt}} />
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         Comments
@@ -64,8 +64,7 @@
         </div>
     </div>
 </div>
-<script src="/static/Bootstrap/js/jquery.min.js"></script>
-<!--<script src="/static/Bootstrap/js/bootstrap.min.js"></script>-->	
+<script src="/static/Bootstrap/js/jquery.min.js"></script>	
 
 
 {% endblock %}

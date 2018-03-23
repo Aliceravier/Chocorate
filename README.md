@@ -24,8 +24,7 @@ CSS/HTML base
 -- have sthg to link to search submit button
 
 Home template
-- add scrollable items with image, title, comments
--- need list of trending chocolates
+- make trending bit not scroll down with posts
 
 MARKS
 - DONE get page to be responsive to change of shape (1) 
