@@ -21,7 +21,18 @@ def home(request):
     return render(request, 'chocorate/home.html', context = context_dict)
 
 def categories(request):
-    context_dict = {'current': 'categories'}
+    context_dict = {}
+    types = ['milk', 'dark']
+    all_chocs = []
+    for t in types:
+        chocolates = Chocolate.objects.filter(chocolate_type=t)
+        chocolates = [c.name for c in chocolates]
+        temp = [t]
+        temp.extend(chocolates)
+        print (temp)
+        all_chocs.append(tuple(temp))
+
+    context_dict['categories'] = all_chocs
     return render(request, 'chocorate/categories.html', context = context_dict)
 
 def profile(request):
