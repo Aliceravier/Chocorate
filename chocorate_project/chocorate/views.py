@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 
 from chocorate.forms import SearchForm 
 from chocorate.models import Search, Chocolate
-from chocorate.forms import AddPostForm, SignUpForm
+from chocorate.forms import AddPostForm, SignUpForm, SettingsForm
 
 
 
@@ -64,7 +64,15 @@ def addPost(request):
 
 def settings(request):
     context_dict = {'current': 'profile'}
-    return render(request, 'chocorate/settings.html', context = context_dict)
+
+    if request.method == 'POST':
+        pass
+    else:
+        settingsForm = SettingsForm(instance=request.user)
+        context_dict['settings_form'] = settingsForm
+
+
+    return render(request, 'chocorate/settings.html',context_dict)
 
 def FAQ(request):
     context_dict = {"current":"about"}

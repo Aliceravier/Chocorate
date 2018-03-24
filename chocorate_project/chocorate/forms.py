@@ -42,10 +42,21 @@ class AddPostForm(forms.ModelForm):
         model = Chocolate
         fields = ('name', 'chocolate_type', 'description', 'picture','picture_url','picture_alt',)
 
-class AddCommentForm:
+class AddCommentForm(forms.ModelForm):
     message = forms.CharField(max_length=500,
                               help_text="Enter comment here")
     rating = forms.FloatField(help_text="Rating here")
     class Meta:
         model = Comment
         fields = ('message', 'rating')
+
+class SettingsForm(forms.ModelForm):
+    new_password = forms.CharField(widget=forms.PasswordInput(), help_text='Enter your password')
+    confirm_password = forms.CharField(widget=forms.PasswordInput(), help_text="Confirm your password")
+
+
+    class Meta:
+        model = User
+        fields = ('email',)
+   # name = forms.CharField(max_length=30,
+                       #    help_text='Enter a new username:')
