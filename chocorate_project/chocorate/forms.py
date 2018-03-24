@@ -51,12 +51,8 @@ class AddCommentForm(forms.ModelForm):
         fields = ('message', 'rating')
 
 class SettingsForm(forms.ModelForm):
-    new_password = forms.CharField(widget=forms.PasswordInput(), help_text='Enter your password')
-    confirm_password = forms.CharField(widget=forms.PasswordInput(), help_text="Confirm your password")
-
 
     class Meta:
-        model = User
-        fields = ('email',)
-   # name = forms.CharField(max_length=30,
-                       #    help_text='Enter a new username:')
+        model = UserProfile
+        fields = ('website', 'picture')
+

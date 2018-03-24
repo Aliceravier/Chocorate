@@ -5,21 +5,18 @@
 {% endblock %}
 
 {% block body_block %}
-	<h1> Set the ins </h1>
+	<h1> Update Profile </h1>
+
 
     {% if form %}
         <form method="POST">
             {% csrf_token %}
-
             {{ form }}
-{#            {% for field in settings_form.visible_fields %}#}
-{#                {{ field }}#}
-{#            {% endfor %}#}
 
-            <button type="submit"> Submit </button>
-{#        </form>#}
+            <button type="submit"> Submit UserProfile </button>
+        </form>
     {% else %}
-        {{ message }}
+        {{ profile_msg }}
     {% endif %}
 
 {% endblock %}

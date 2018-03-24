@@ -15,7 +15,8 @@ urlpatterns = [
     url(r'^profile/signOut/$', auth_views.logout,{'next_page': '/chocorate/home/'},  name='signOut'),
     url(r'^profile/myPost/$', views.myPost, name='myPost'),
     url(r'^profile/addPost/$', views.addPost, name='addPost'),
-    url(r'^profile/settings/$', views.settings, name='settings'),
+    url(r'^profile/changePassword/$', views.settings, name='changePassword'),
+    url(r'^profile/updateProfile/$', views.updateProfile, name='updateProfile'),
     url(r'^about/FAQ/$', views.FAQ, name='FAQ'),
     url(r'^test/$', views.test, name='test'),
 
