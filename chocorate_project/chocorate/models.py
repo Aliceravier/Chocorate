@@ -23,7 +23,10 @@ class Chocolate(models.Model):
     picture_url = models.CharField(max_length=200)
     picture_alt = models.CharField(default="some image should be here", max_length=200)
     description = models.CharField(default="",max_length=200)
-    
+
+    def __str__(self):
+        return self.name
+
 #to add to comment class
 class Rating(models.Model):
     chocolate=models.ForeignKey(Chocolate)
