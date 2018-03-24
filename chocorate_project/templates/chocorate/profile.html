@@ -17,7 +17,8 @@
 	<div>
 		<ul>
             {% if user.is_authenticated %}
-			<li><a href="{% url 'settings' %}">Settings</a></li>			
+			<li><a href="{% url 'changePassword' %}">Change Password</a></li>
+            <li><a href="{% url 'updateProfile' %}">Update Profile</a></li>
 			<li><a href="{% url 'addPost' %}">Add a Post</a></li>
 			<li><a href="{% url 'myPost' %}">Your post</a></li>
             <li><a href="{% url 'signOut' %}">Logout</a></li>
