@@ -94,7 +94,7 @@ def settings(request):
 
         if profileForm.is_valid():
             profile = profileForm.save(commit=False)
-    
+
         else:
             context_dict['profile_msg'] = profileForm.errors
 
