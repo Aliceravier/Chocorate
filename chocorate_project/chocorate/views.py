@@ -15,10 +15,10 @@ from chocorate.forms import AddPostForm, SignUpForm, SettingsForm
 
 
 def home(request):
-    context_dict = {'current': 'home'}
+    context_dict = {}
     context_dict['chocolates']=Chocolate.objects.order_by('name')
     context_dict['chocolates5']=Chocolate.objects.order_by('name')[:5]
-    return render(request, 'chocorate/home.html', context = context_dict)
+    return render(request, 'chocorate/home.html', context=context_dict)
 
 def categories(request):
     context_dict = {}
@@ -58,13 +58,16 @@ def signUp(request):
             print(sign_form.errors)
     return render(request, 'chocorate/signUp.html', {'form' : sign_form})
 
+@login_required()
 def signOut(request):
     logout(request)
 
+@login_required()
 def myPost(request):
     context_dict = {'current': 'profile'}
     return render(request, 'chocorate/myPost.html', context = context_dict)
 
+@login_required()
 def addPost(request):
     form = AddPostForm()
     if request.method == 'POST':
@@ -91,7 +94,7 @@ def settings(request):
 
         if profileForm.is_valid():
             profile = profileForm.save(commit=False)
-            print ('profile %s' % profile)
+    
         else:
             context_dict['profile_msg'] = profileForm.errors
 
