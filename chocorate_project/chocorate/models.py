@@ -20,9 +20,9 @@ class Chocolate(models.Model):
     chocolate_type = models.CharField(default="", max_length=200)
     # url = models.URLField()
     picture = models.ImageField(blank=True, null=True, help_text="Upload image of chocolate here")
-    picture_url = models.CharField(max_length=200)
+    picture_url = models.CharField(default="", max_length=200)
     picture_alt = models.CharField(default="some image should be here", max_length=200)
-    description = models.CharField(default="",max_length=200)
+    description = models.CharField(default="", max_length=200)
 
     def __str__(self):
         return self.name
