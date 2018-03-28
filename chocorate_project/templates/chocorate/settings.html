@@ -5,21 +5,22 @@
 {% endblock %}
 
 {% block body_block %}
-	<h1> Set the ins </h1>
+	<div class="page-header">
+			<h2 class="text-center"> Change Password</h2>
+    </div>
+
+    <div class="codntainer-center">
 
     {% if form %}
         <form method="POST">
             {% csrf_token %}
 
-            {{ form }}
-{#            {% for field in settings_form.visible_fields %}#}
-{#                {{ field }}#}
-{#            {% endfor %}#}
+            {{ form.as_p }}
 
             <button type="submit"> Submit </button>
-{#        </form>#}
+        </form>
     {% else %}
         {{ message }}
     {% endif %}
-
+    </div>
 {% endblock %}

@@ -4,27 +4,25 @@
 	About Chocorate
 {% endblock %}
 
-{% block css-link %}
-    <link rel="stylesheet" type="text/css" href="/static/css/about.css">
-{% endblock %}
+
 
 
 {% block body_block %}
 		<div class="page-header">
-			<h1 class="text-center"> About Us</h1>
+			<h2 class="text-center"> About Us</h2>
 		</div>
 
 		<div class="container-center">
-			<img src="/static/images/team.jpg" class="img-rounded img-responsive" id="team-pic" alt="picture of team" />
+			<img src="/static/images/team.jpg" class="img-rounded img-responsive" style="width: 500px;margin: 0 auto;" alt="picture of team" />
 		</div>
 
-		<p class="text-center"> hello there, here is a message for all the chocolate haters, you'll die a horrible death.</p>
-
+		<p class="text-center"> The aim of this application is to give chocolate enthusiasts a place to share, discuss, rate and look at others’ images and opinions for different type of chocolates. Since most of the functions are available for registered users, a chocolate lover is encouraged to sign up and enjoy posting and rating chocolates. For those interested in others’ opinions and not sharing their ones, fortunately the content can be seen by anyone</p>
+		<p class="text-center">​ Each user is able to sign up and start uploading, rating and commenting others’ posts. ​Moreover, after each posted comment on a chocolate image, the image’s owner will get a notification and then be able to delete the comment if irrelevant, for example. However, the rating will remain the way it was given by other users. Each user is also able to edit, log in and out as well as delete their account at any time.</p>
 		<div class="row" style="margin:5px;">
-			<div class="col-sm-6" style="background-color:saddlebrown; border: 1pt solid brown;">
+			<div class="col-sm-6" style="background-color:saddlebrown; border: 1pt solid black;">
 				<a href="{% url 'FAQ' %}"><h3 class="text-center" style="color:sandybrown;">FAQ</h3></a>
 			</div>
-			<div class="col-sm-6" style="background-color:saddlebrown; border: 1pt solid brown;">
+			<div class="col-sm-6" style="background-color:saddlebrown; border: 1pt solid black;">
 				<h3 class="text-center " style="color:sandybrown;">Contact Us</h3>
 			</div>
 		</div>

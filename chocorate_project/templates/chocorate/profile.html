@@ -6,26 +6,23 @@
 
 {% block body_block %}
 
-	<h1> 
+
     {% if user.is_authenticated %}
-    Hi {{user.username}} ! 
+            <div class="row">
+                <div class="col-sm-3 text-center" style="font-size: 10pt;margin-top: 30pt; border-right: 1px solid #fff;">
+                    <h2>Hi {{user.username}} ! </h2><br>
+			        <a href="{% url 'changePassword' %}">Change Password</a><br>
+                    <a href="{% url 'updateProfile' %}">Update Profile</a><br>
+			        <a href="{% url 'addPost' %}">Add a Post</a><br>
+			        <a href="{% url 'myPost' %}">Your post</a><br>
+                    <a href="{% url 'signOut' %}">Logout</a><br>
+                </div>
+            </div>
     {% else %}
-    Hi, login or sign up here :)
+            <h2>Hi, login or sign up here :)</h2>
+            <a href="{% url 'signUp' %}">SignUpIn</a><br>
+            <<a href="{% url 'login' %}">login</a><br>
     {% endif %}
-    
-    </h1>
-	<div>
-		<ul>
-            {% if user.is_authenticated %}
-			<li><a href="{% url 'changePassword' %}">Change Password</a></li>
-            <li><a href="{% url 'updateProfile' %}">Update Profile</a></li>
-			<li><a href="{% url 'addPost' %}">Add a Post</a></li>
-			<li><a href="{% url 'myPost' %}">Your post</a></li>
-            <li><a href="{% url 'signOut' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'signUp' %}">SignUpIn</a></li>
-            <li><a href="{% url 'login' %}">login</a></li>
-            {% endif %}
-		</ul>
-	</div>
+
+
 {% endblock %}

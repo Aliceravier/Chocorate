@@ -4,19 +4,12 @@
 	Welcome to New Home
 {% endblock %}
 
-{% block css-link %}
-    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
-{% endblock %}
+
 
 {% block body_block %}
-<div>
-    {% if user.is_authenticated %}
-        Welcome {{ user.username }}!
-    {% endif %}
-</div>
 
 <div class="row">
-    <div class="col-sm-3 text-center" style="font-size: 10pt;margin-top: 30pt; border-right: 1px solid #fff;">
+    <div class="col-sm-3 text-center" style="font-size: 10pt; border-right: 1px solid #fff;">
         <h2 class="w3-sandybrown">Trending</h2>
         <div class="w3-container w3-sandybrown w3-hover-text-white">
             {% if chocolates5 %}
@@ -28,45 +21,45 @@
                 {% endfor %}
             </ul>
             {% else %}
-            <strong style="font-size: 10pt;margin-top: 200pt;"> There are no chocolates present. </strong>
+            <strong style="font-size: 10pt;"> There are no chocolates present. </strong>
             {% endif %}
-            <button type="button" class="btn btn-default" style="border-top:1pt;background-color:saddlebrown;">Sort alphabetically</button>
+            <button type="button" class="btn btn-default" style="border-top:1pt;background-color:burlywood;width:100%;">Sort alphabetically</button>
         </div>
     </div>
     <div class="col-sm-9 text-center" >
         <div class="items">
             {% if chocolates %}
-            <ul class="list-unstyled">
+            <ul class="list-unstyled" style="border-bottom:1pt solid;background-color:burlywood;text-align:center;">
                 {% for chocolate in chocolates %}
                 <li>
                     <div class="choc-title">
                         {{chocolate.name}}
                     </div><!--"/static/images/team.jpg"-->
                     <img src={{chocolate.picture_url}} class="img-rounded img-responsive" alt={{chocolate.picture_alt}} />
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Comments
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        {% if chocolate.comments %}
-                            {% for comment in chocolate.comments %}
-                            <li>
-                                {{comment.message}}
-                            </li>
-                            {% endfor %}
-                        {% else %}
-                        <strong class="no-comms"> No-one has commented yet </strong>
-                        {% endif %}
-                    </ul>
-                </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Comments
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {% if chocolate.comments %}
+                                {% for comment in chocolate.comments %}
+                                <li>
+                                    {{comment.message}}
+                                </li>
+                                {% endfor %}
+                            {% else %}
+                            <strong class="no-comms"> No-one has commented yet </strong>
+                            {% endif %}
+                        </ul>
+                    </li>
                 <li>
                     <button type="button" class="btn btn-default comm-btn" >Add comment</button>
                 </li>
                 {% endfor %}
             </ul>
             {% else %}
-            <strong style="font-size: 10pt;margin-top: 300pt;"> There are no chocolates present. </strong>
+            <strong style="font-size: 10pt;background-color:burlywood;"> There are no chocolates present. </strong>
             {% endif %}
         </div>
     </div>

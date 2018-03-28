@@ -6,22 +6,30 @@
 {% endblock %}
 
 {% block body_block %}
-    <h1> Cats, cats, cats </h1>
+<div class="row">
+    <div class="col-sm-6 text-center" style="font-size: 10pt; border-right: 1px solid #fff;">
+        <h2 class="w3-sandybrown">Categories</h2>
 
-    {% for cat in categories %}
-    <ul>
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about' %}"> {{ cat.0 }}
-                <span class="caret"></span></a>
+    </div>
+    <div class="col-sm-6 text-center" style="font-size:10pt;">
+        {% for cat in categories %}
+        <ul>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about' %}"> {{ cat.0 }}
+                    <span class="caret"></span></a>
 
-            <ul class="dropdown-menu">
-                {% for el in cat %}
-                    {% if el != cat.0 %}
-                        <li><a href="{% url 'home' %}"> {{ el }}</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </li>
-    </ul>
-    {% endfor %}
+                <ul class="dropdown-menu">
+                    {% for el in cat %}
+                        {% if el != cat.0 %}
+                         <li><a href="{% url 'home' %}"> {{ el }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+
+
 {% endblock %}

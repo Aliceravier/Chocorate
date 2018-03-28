@@ -14,8 +14,6 @@
 			{% endblock %}
 		</title>
         <link rel="stylesheet" type="text/css" href="/static/css/base.css">
-        {% block css-link %}		
-        {% endblock %}
 	</head>
 	<body>      
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -116,7 +114,7 @@
 		</nav>
 
 		<div class="container">
-			<div class="jumbotron" style="background-color:sandybrown;">
+			<div class="jumbotron" style="background-color:sandybrown; text-align:center; margin-top:70px;">
           		{% block body_block %}
           		{% endblock %}
   	  		</div>
@@ -127,20 +125,21 @@
     			<footer>
     				<div class="row">
     					<div class="col-md-4">
-							<p><h3>&copy; 2018 Chocorate</h3></p>
-    						<a href="{% url 'home' %}" >Chocorate</a>
+    						<a href="{% url 'home' %}" ><p><h3>&copy; 2018 Chocorate</h3></p></a>
     					</div>
     					<div class="col-md-4">
-							<h4><u>General</u></h4>
+							<h4><b>General</b></h4>
     						<a href="{% url 'home' %}">Home</a><br />
     						<a href="{% url 'about' %}">About</a><br />
 							<a href="{% url 'login' %}">Login</a><br />
 							<a href="{% url 'signUp' %}">Register</a><br />
     					</div>
     					<div class="col-md-4">
-							<h4><u>Profile</u></h4>
+							<h4><b>Profile</b></h4>
     						<a href="{% url 'profile' %}">My Account</a><br />
     						<a href="{% url 'updateProfile' %}">Update Profile</a><br />
+							<a href="{% url 'addPost' %}">Add Post</a><br />
+							<a href="{% url 'changePassword' %}">Change Password</a><br />
     					</div>
     				</div>
     			</footer>
