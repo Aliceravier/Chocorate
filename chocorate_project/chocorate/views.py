@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import logout
 from django.core.urlresolvers import reverse
@@ -8,7 +8,7 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 
-from chocorate.forms import SearchForm 
+from chocorate.forms import SearchForm
 from chocorate.models import Search, Chocolate, UserProfile
 from chocorate.forms import AddPostForm, SignUpForm, SettingsForm
 
@@ -47,16 +47,19 @@ def about(request):
 
 
 def signUp(request):
-    sign_form = SignUpForm()
     if request.method == 'POST':
         sign_form = SignUpForm(request.POST)
         if sign_form.is_valid():
-            user = sign_form.save()
-            user.set_password(user.password)
-            user.save()
+            sign_form.save()
+            username = sign_form.cleaned_data.get('username')
+            raw_password = sign_form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
             return home(request)
         else:
             print(sign_form.errors)
+    else:
+        sign_form = SignUpForm()
     return render(request, 'chocorate/signUp.html', {'form' : sign_form})
 
 @login_required()
