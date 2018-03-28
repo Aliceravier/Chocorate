@@ -8,7 +8,7 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			Chocorate - 
+			Chocorate
 			{% block title_block %}
 				The chocolate rating website
 			{% endblock %}
@@ -19,7 +19,7 @@
 	</head>
 	<body>      
 		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <div class="icon-bars">
@@ -51,8 +51,8 @@
                                 {% if user.is_authenticated %}
 								    <li><a href="{% url 'changePassword' %}">Change Password </a></li>
                                     <li><a href="{% url 'updateProfile' %}">Update Profile</a></li>
-								    <li><a href="{% url 'addPost' %}">Add a Post</a></li>
-								    <li><a href="{% url 'myPost' %}">Your post</a></li>
+								    <li><a href="{% url 'addPost' %}">Add Post</a></li>
+								    <li><a href="{% url 'myPost' %}">Your Post</a></li>
                                 {% else %}
                                     <li><a href="{% url 'signUp' %}">SignUp</a></li>
                                 <li><a href="{% url 'login' %}">login</a></li>
@@ -64,7 +64,7 @@
 							<a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about' %}">About
 							<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-                                <li><a href="{% url 'about' %}">About page</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
 								<li><a href="{% url 'FAQ' %}">FAQ</a></li>
 							</ul>
 						</li>
@@ -83,7 +83,7 @@
 						{% endfor %}
 						 <div class="form-group">
                             <input type="text" class="form-control" name="search" placeholder="Search" />
-                        	<button type="submit" class="btn btn-default">Submit</button>
+                        	<button type="submit" class="btn btn-default">Search</button>
 						 </div>
 
                     </form>
@@ -95,8 +95,8 @@
                             </span> Hey {{user.username}}!
                         </li>
                         <li>
-                            <a href="{% url 'signOut' %}">
-                                <dpsn></dpsn>Sign out</span>
+                            <a href="{% url 'signOut' %}"> <span>
+                                </span>Sign out
                             </a>
                         </li>
                         {% else %}      
@@ -112,12 +112,41 @@
                         {% endif %}
 					</ul>
 				</div>
+			</div>
 		</nav>
 
-		<div id="body-block" class="pushUp container-fluid">
-			{% block body_block %}
-			{% endblock %}
-		</div> 
+		<div class="container">
+			<div class="jumbotron" style="background-color:sandybrown;">
+          		{% block body_block %}
+          		{% endblock %}
+  	  		</div>
+
+
+		<div class="row footer-text-size">
+    		<div class="col-xs-12">
+    			<footer>
+    				<div class="row">
+    					<div class="col-md-4">
+							<p><h3>&copy; 2018 Chocorate</h3></p>
+    						<a href="{% url 'home' %}" >Chocorate</a>
+    					</div>
+    					<div class="col-md-4">
+							<h4><u>General</u></h4>
+    						<a href="{% url 'home' %}">Home</a><br />
+    						<a href="{% url 'about' %}">About</a><br />
+							<a href="{% url 'login' %}">Login</a><br />
+							<a href="{% url 'signUp' %}">Register</a><br />
+    					</div>
+    					<div class="col-md-4">
+							<h4><u>Profile</u></h4>
+    						<a href="{% url 'profile' %}">My Account</a><br />
+    						<a href="{% url 'updateProfile' %}">Update Profile</a><br />
+    					</div>
+    				</div>
+    			</footer>
+		   	</div>
+	  	</div>
+		</div>
 		<script src="/static/Bootstrap/js/jquery.min.js"></script>
 		<script src="/static/Bootstrap/js/bootstrap.min.js"></script>
         <script src="/static/js/base.js"></script>

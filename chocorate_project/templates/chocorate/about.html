@@ -10,13 +10,23 @@
 
 
 {% block body_block %}
-	<div class="page-header">
-		<h1 id="about"> About </h1>
-	</div>
-	<img src="/static/images/team.jpg" class="img-rounded img-responsive" id="team-pic" alt="picture of team" />
-	<div>
-	<ul>
-		<li class="list-unstyled" ><a href="{% url 'FAQ' %}">FAQ</a></li>
-	</ul>
-	</div>
+		<div class="page-header">
+			<h1 class="text-center"> About Us</h1>
+		</div>
+
+		<div class="container-center">
+			<img src="/static/images/team.jpg" class="img-rounded img-responsive" id="team-pic" alt="picture of team" />
+		</div>
+
+		<p class="text-center"> hello there, here is a message for all the chocolate haters, you'll die a horrible death.</p>
+
+		<div class="row" style="margin:5px;">
+			<div class="col-sm-6" style="background-color:saddlebrown; border: 1pt solid brown;">
+				<a href="{% url 'FAQ' %}"><h3 class="text-center" style="color:sandybrown;">FAQ</h3></a>
+			</div>
+			<div class="col-sm-6" style="background-color:saddlebrown; border: 1pt solid brown;">
+				<h3 class="text-center " style="color:sandybrown;">Contact Us</h3>
+			</div>
+		</div>
+
 {% endblock %}
