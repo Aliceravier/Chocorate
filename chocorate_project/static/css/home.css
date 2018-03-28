@@ -3,31 +3,11 @@
     font-size: 30pt;
     position: fixed;
 
-.trending h2 {
-    font-size: 30pt;
-    margin-top: 30pt;
 }
 
 
 
 
-#sort-btn{
-    margin-top: 30pt;
-}
 
 
-.no-cats{
-    font-size: 20pt;
-    margin-top: 200pt;
-}
-
-.no-chocs {
-    font-size: 20pt;
-    margin-top: 300pt;
-}
-
-#trending {
-    border-right: 3px black solid;
-    height:100%;
-}
 
