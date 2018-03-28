@@ -9,6 +9,12 @@
 {% endblock %}
 
 {% block body_block %}
+<div>
+    {% if user.is_authenticated %}
+        Welcome {{ user.username }}!
+    {% endif %}
+</div>
+
 <div class="row">
     <div class="trending col-sm-3 text-center" id="trending">
         <h2>Trending</h2>
