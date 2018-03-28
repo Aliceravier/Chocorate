@@ -3,37 +3,15 @@
 {% block title %}Login{% endblock %}
 
 {% block body_block %}
-<<<<<<< HEAD
-
-            <div class="panel panel-default" style="text-align:center;width:50%">
-                <div class="panel-heading">
-                    <h4>Sign Up</h4>
-                </div>
-                <div>
-                    <form id="category_form" method="post" action="{% url 'signUp' %}">
-                        {% csrf_token %}
-                        {% for hidden in form.hidden_fields %}
-                        {{ hidden }}
-                        {% endfor %}                     
-                        <div class="panel-body">
-                                {% for field in form.visible_fields %}
-                                {{ field.errors }}
-                                {{ field.help_text }}
-                                {{ field }}
-                                {% endfor %}
-                            <input type="submit" name="submit" value="Sign Up">
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-=======
-  <h2>Sign up</h2>
+<div class="page-header">
+		<h2 class="text-center">Sign Up</h2>
+</div>
+<div class="container_fluid" style="text_align:left;">
   <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign up</button>
   </form>
->>>>>>> 3204e74b6a9399038781eab5404bbd3727ccfb86
+</div>
+
 {% endblock %}

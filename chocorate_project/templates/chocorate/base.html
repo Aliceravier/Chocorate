@@ -79,11 +79,11 @@
 
                     </form>
                     
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right" style="color:burlywood;">
                         {% if user.is_authenticated %}
                         <li>                      
                             <span class="glyphicon glyphicon-user">
-                            </span> Hey {{user.username}}!
+							</span> Hey {{user.username}}!
                         </li>
                         <li>
                             <a href="{% url 'signOut' %}"> <span>
