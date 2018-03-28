@@ -29,9 +29,9 @@
     <div class="col-sm-9 text-center" >
         <div class="items">
             {% if chocolates %}
-            <ul class="list-unstyled" style="border-bottom:1pt solid;background-color:burlywood;text-align:center;">
+            <ul class="list-unstyled" >
                 {% for chocolate in chocolates %}
-                <li>
+                <li id="post">
                     <div class="choc-title">
                         {{chocolate.name}}
                     </div><!--"/static/images/team.jpg"-->
@@ -40,7 +40,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Comments
                             <span class="caret"></span>
-                        </a>
+                        </a>e
                         <ul class="dropdown-menu">
                             {% if chocolate.comments %}
                                 {% for comment in chocolate.comments %}
@@ -53,7 +53,7 @@
                             {% endif %}
                         </ul>
                     </li>
-                <li>
+                <li >
                     <button type="button" class="btn btn-default comm-btn" >Add comment</button>
                 </li>
                 {% endfor %}

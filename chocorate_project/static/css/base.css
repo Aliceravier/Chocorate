@@ -92,3 +92,13 @@ a:hover{
     margin: 40px 0 20px;
     border-bottom: 1px solid #fff;
 }
+
+#post{
+    border-bottom:1pt solid;
+    background-color:burlywood;
+    text-align:center;
+    padding-top:10px
+    padding-bottom:10px
+    padding-left:10px
+    padding-right:10px
+}

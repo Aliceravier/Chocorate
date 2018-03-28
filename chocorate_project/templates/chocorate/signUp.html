@@ -1,14 +1,9 @@
 {% extends 'chocorate/base.html' %}
 
-{% block title_block %}
-	SignUpIn
-{% endblock %}
-
-{% block css-link %}
-<link rel="stylesheet" type="text/css" href="/static/css/signUpIn.css">
-{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block body_block %}
+<<<<<<< HEAD
 
             <div class="panel panel-default" style="text-align:center;width:50%">
                 <div class="panel-heading">
@@ -33,4 +28,12 @@
             </div>
 
 
+=======
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+>>>>>>> 3204e74b6a9399038781eab5404bbd3727ccfb86
 {% endblock %}

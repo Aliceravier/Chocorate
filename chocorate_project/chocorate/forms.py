@@ -4,14 +4,15 @@ from chocorate.models import UserProfile
 from chocorate.models import Search
 from chocorate.models import Chocolate
 from chocorate.models import Comment
+from django.contrib.auth.forms import UserCreationForm
 
 
-class SignUpForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
+class SignUpForm(UserCreationForm):
+    email = forms.EmailField(max_length=254, help_text='Requires a valid email address.')
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password')
+        fields = ('username', 'email', 'password1','password2', )
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
