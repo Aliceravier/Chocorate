@@ -16,9 +16,9 @@
 </div>
 
 <div class="row">
-    <div class="trending col-sm-3 text-center" id="trending">
-        <h2>Trending</h2>
-        <div>
+    <div class="col-sm-3 text-center" style="font-size: 10pt;margin-top: 30pt; border-right: 1px solid #fff;">
+        <h2 class="w3-sandybrown">Trending</h2>
+        <div class="w3-container w3-sandybrown w3-hover-text-white">
             {% if chocolates5 %}
             <ul class="list-unstyled">
                 {% for chocolate in chocolates5 %}
@@ -28,12 +28,12 @@
                 {% endfor %}
             </ul>
             {% else %}
-            <strong class="no-cats"> There are no chocolates present. </strong>
+            <strong style="font-size: 10pt;margin-top: 200pt;"> There are no chocolates present. </strong>
             {% endif %}
+            <button type="button" class="btn btn-default" style="border-top:1pt;background-color:saddlebrown;">Sort alphabetically</button>
         </div>
     </div>
-    <div class="col-sm-9 text-center">
-        <button type="button" class="btn btn-default pull-left" id="sort-btn">Sort alphabetically</button>
+    <div class="col-sm-9 text-center" >
         <div class="items">
             {% if chocolates %}
             <ul class="list-unstyled">
@@ -60,12 +60,13 @@
                         {% endif %}
                     </ul>
                 </li>
+                <li>
                     <button type="button" class="btn btn-default comm-btn" >Add comment</button>
                 </li>
                 {% endfor %}
             </ul>
             {% else %}
-            <strong class="no-chocs"> There are no chocolates present. </strong>
+            <strong style="font-size: 10pt;margin-top: 300pt;"> There are no chocolates present. </strong>
             {% endif %}
         </div>
     </div>

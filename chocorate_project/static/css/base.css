@@ -2,6 +2,7 @@ body{
 	background-color: bisque;
 	}
 
+
 a{
     color: saddlebrown;
 }
@@ -12,6 +13,7 @@ a:hover{
 
 .navbar {
     background-color: saddlebrown;
+
 }
 
 .navbar .navbar-brand{
@@ -72,6 +74,18 @@ a:hover{
     background-color: bisque;
 }
 
+.footer-text-size {
+    font-size: 25px;
+}
+
+.col-md-2 .btn {
+    margin: 5px;
+}
+
+.container-centre {
+    width: 100%;
+    text-align: center;
+}
 #body-block {
     margin-top: 50px;
 }
