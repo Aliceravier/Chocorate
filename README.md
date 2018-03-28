@@ -2,10 +2,14 @@
 Repo for our second year WAD project that aims to setup the Chocorate website (about rating chocolate) using django
 
 TODO (incomplete list)
+- After pulling, you have to use these commands so as to run the server successfully and work on the website:
+1. python manage.py makemigrations
+2. python manage.py migrate
+3. python population_script.py
 - rate chocolates
 - comments
-- make nice html/css for all views	
-- population script
+- make nice html/css for all views
+- ~~population script~~
 - get sign out to show alert when signing out sucessfully
 
 - add specifics under 'MARKS' that we're being marked on in here

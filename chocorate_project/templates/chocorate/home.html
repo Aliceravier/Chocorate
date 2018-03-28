@@ -9,6 +9,12 @@
 {% endblock %}
 
 {% block body_block %}
+<div>
+    {% if user.is_authenticated %}
+        Welcome {{ user.username }}!
+    {% endif %}
+</div>
+
 <div class="row">
     <div class="col-sm-3 text-center" style="font-size: 10pt;margin-top: 30pt; border-right: 1px solid #fff;">
         <h2 class="w3-sandybrown">Trending</h2>

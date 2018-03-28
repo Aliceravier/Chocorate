@@ -29,8 +29,9 @@ def add_user_profile(user, website, picture, notifications):
 
 
 def add_chocolate(name, description, picture, picture_url, picture_alt, chocolate_type, comments, avgrating):
-    choco = Chocolate.objects.get_or_create(name=name, description=description, picture=picture, chocolate_type=chocolate_type,
-                                            comments=comments, avgrating=avgrating, picture_alt=picture_alt, picture_url=picture_url)[0]
+    choco = Chocolate.objects.get_or_create(name=name, description=description, picture=picture, picture_alt=picture_alt,
+                                            picture_url=picture_url, chocolate_type=chocolate_type,
+                                            comments=comments, avgrating=avgrating)[0]
     return choco
 
 
