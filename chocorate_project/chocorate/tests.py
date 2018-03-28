@@ -23,8 +23,10 @@ class ModelTests(TestCase):
     # Test for adding chocolate
     def test_add_chocolate(self):
         u = User.objects.get(username='test')
+        choco_nums = len(Chocolate.objects.all())
         choco = Chocolate.objects.create(name="test1", description="good choice", picture="",
                                          picture_alt="some image should be here",
-                                         picture_url="", chocolate_type="milk", comments="", avg_rating=4.5)
+                                         picture_url="", chocolate_type="milk", comments="", avgrating=4.5)
         choco.save()
-        self.assertEqual(choco.creator == u, True)
+        self.assertEqual(len(Chocolate.objects.all()), choco_nums + 1)
+
